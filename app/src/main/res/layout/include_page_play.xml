@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.d9ing.mediademo.view.ViewGroupHook xmlns:android="http://schemas.android.com/apk/res/android"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/img_playinfo_bg"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="暂无歌词"
+            android:textColor="#00ff00"
+            android:id="@+id/tv_minilrc"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--left textview-->
+            <TextView
+                android:id="@+id/tv_curduration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="00:00"
+                android:textColor="#ffffff"
+                />
+            <!-- right textview-->
+            <TextView
+                android:id="@+id/tv_totalduration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:text="04:00"
+                android:textColor="#ffffff"
+                />
+            <!-- seekbar-->
+            <SeekBar
+                android:id="@+id/sk_duration"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@+id/tv_totalduration"
+                android:layout_toRightOf="@+id/tv_curduration"
+                android:progressDrawable="@drawable/seek_background"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+</com.d9ing.mediademo.view.ViewGroupHook>

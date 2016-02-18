@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_single_bg"
+    tools:context=".MainActivity">
+    <!--top-->
+    <include
+        android:id="@+id/include_top_id"
+        layout="@layout/include_top"/>
+
+    <include
+
+        android:id="@+id/include_bottom_id"
+        layout="@layout/include_bottom"/>
+    <!-- 可滚动的-->
+    <com.d9ing.mediademo.view.ScrollableViewGroup
+        android:id="@+id/svg_main"
+        android:layout_above="@+id/include_bottom_id"
+        android:layout_below="@+id/include_top_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/include_page_play"/>
+        <include layout="@layout/include_page_list"/>
+        <include layout="@layout/include_page_lrc"/>
+    </com.d9ing.mediademo.view.ScrollableViewGroup>
+
+</RelativeLayout>
